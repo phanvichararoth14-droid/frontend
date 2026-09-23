@@ -1,0 +1,4 @@
+console.log("--------------------");
+console.log("Rise & shine!");
+console.log("Ready for new day!");
+console.log("------------------");

@@ -1,0 +1,75 @@
+import javax.swing.*;
+
+public class StudentRecord extends JFrame{
+
+    JLabel l1,l2,l3,l4;
+    JTextField txtID,txtName,txtScore;
+    JRadioButton male,female;
+    ButtonGroup bg;
+    JButton insert,delete,update;
+    JTextArea ta;
+    JScrollPane sp;
+
+    public StudentRecord(){
+
+        setTitle("STUDENT RECORD");
+        setLayout(null);
+
+        l1=new JLabel("ID");
+        l2=new JLabel("Name");
+        l3=new JLabel("Sex");
+        l4=new JLabel("Score");
+
+        txtID=new JTextField();
+        txtName=new JTextField();
+        txtScore=new JTextField();
+
+        male=new JRadioButton("Male");
+        female=new JRadioButton("Female");
+
+        bg=new ButtonGroup();
+        bg.add(male);
+        bg.add(female);
+
+        insert=new JButton("INSERT");
+        delete=new JButton("DELETE");
+        update=new JButton("UPDATE");
+
+        ta=new JTextArea();
+        sp=new JScrollPane(ta);
+
+        l1.setBounds(50,40,80,30);
+        txtID.setBounds(120,40,150,30);
+
+        l2.setBounds(50,80,80,30);
+        txtName.setBounds(120,80,150,30);
+
+        l3.setBounds(50,120,80,30);
+        male.setBounds(120,120,70,30);
+        female.setBounds(200,120,90,30);
+
+        l4.setBounds(50,160,80,30);
+        txtScore.setBounds(120,160,150,30);
+
+        insert.setBounds(60,210,90,30);
+        delete.setBounds(160,210,90,30);
+        update.setBounds(260,210,90,30);
+
+        sp.setBounds(50,260,320,120);
+
+        add(l1); add(txtID);
+        add(l2); add(txtName);
+        add(l3); add(male); add(female);
+        add(l4); add(txtScore);
+        add(insert); add(delete); add(update);
+        add(sp);
+
+        setSize(450,450);
+        setVisible(true);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+    }
+
+    public static void main(String args[]){
+        new StudentRecord();
+    }
+}
